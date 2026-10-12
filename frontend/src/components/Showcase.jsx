@@ -1,6 +1,4 @@
-import React from 'react';
 import './Showcase.css';
-import { IMAGES } from '../assets/images';
 import { useApp } from '../context';
 
 export default function Showcase() {

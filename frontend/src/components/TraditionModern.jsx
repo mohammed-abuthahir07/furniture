@@ -1,6 +1,6 @@
 import React from 'react';
 import './TraditionModern.css';
-import { IMAGES } from '../assets/images';
+
 import { useApp } from '../context';
 
 export default function TraditionModern() {

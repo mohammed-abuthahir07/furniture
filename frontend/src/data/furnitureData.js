@@ -1,4 +1,4 @@
-import { IMAGES } from '../assets/images';
+
 
 export const BRAND = {
   name: 'Varnam Heritage Woodcraft',
