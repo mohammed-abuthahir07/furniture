@@ -1,0 +1,109 @@
+/* ==========================================================================
+   FLOATING WHATSAPP BUTTON STYLES
+   ========================================================================== */
+
+.wa-floating-wrapper {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.wa-floating-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-whatsapp);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
+  position: relative;
+  transition: transform var(--transition-smooth), background var(--transition-smooth);
+}
+
+.wa-floating-btn:hover {
+  background: var(--color-whatsapp-dark);
+  transform: scale(1.08) translateY(-2px);
+  color: #FFFFFF;
+}
+
+.wa-pulse-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid var(--color-whatsapp);
+  opacity: 0.7;
+  animation: waPulse 2.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  pointer-events: none;
+}
+
+.wa-pulse-ring.ring-2 {
+  animation-delay: 1.2s;
+}
+
+@keyframes waPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Tooltip on Desktop */
+.wa-floating-tooltip {
+  position: absolute;
+  right: 75px;
+  background: rgba(26, 20, 18, 0.94);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 0.65rem 1rem;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.wa-floating-tooltip.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tooltip-title {
+  font-size: 0.8125rem;
+
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.tooltip-sub {
+  font-size: 0.6875rem;
+  color: var(--color-whatsapp);
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .wa-floating-wrapper {
+    bottom: calc(1rem + env(safe-area-inset-bottom));
+    right: 1rem;
+  }
+  .wa-floating-btn {
+    width: 54px;
+    height: 54px;
+  }
+  .wa-floating-tooltip {
+    display: none;
+  }
+}

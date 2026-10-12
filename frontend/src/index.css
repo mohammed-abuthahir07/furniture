@@ -1,0 +1,535 @@
+/* ==========================================================================
+   VARNAM HERITAGE WOODCRAFT - GLOBAL DESIGN SYSTEM (LIGHT & DARK MODE)
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+  /* LIGHT PALETTE: Warm, Bright, Natural Hardwood Tones with Crisp Contrast */
+  --color-bg: #FAF8F5;
+  --color-bg-light: #FFFFFF;
+  --color-bg-warm: #F3EDE2;
+  --color-bg-sand: #ECE4D6;
+  --color-bg-dark: #1A1412;
+  --color-bg-dark-surface: #261F1B;
+  
+  --color-text-primary: #1F1A16;
+  --color-text-secondary: #5E5349;
+  --color-text-muted: #8F8174;
+  --color-text-light: #FAF8F5;
+  --color-text-light-muted: #C8BDB0;
+
+  --color-accent: #A65B2E;            /* Warm Terracotta / Rich Walnut */
+  --color-accent-hover: #8C4920;
+  --color-accent-light: #F7EFE8;
+  --color-accent-gold: #C59E58;       /* Subtle Warm Gold */
+  --color-accent-gold-light: #FBF4E6;
+  
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #1EBE5D;
+  --color-whatsapp-bg: #E8F8EE;
+
+  --color-border: #E5DCD0;
+  --color-border-light: #F0E8DD;
+  --color-border-dark: #3A302A;
+
+  --nav-bg: rgba(250, 248, 245, 0.98);
+  --card-bg: #FFFFFF;
+  --input-bg: #F3EDE2;
+  --modal-bg: #FAF8F5;
+
+  /* Typography System (English default) */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 20px rgba(31, 26, 22, 0.04);
+  --shadow-card: 0 10px 30px rgba(31, 26, 22, 0.06);
+  --shadow-hover: 0 18px 40px rgba(31, 26, 22, 0.12);
+
+  /* Transitions */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.35s var(--ease-out-expo);
+
+  /* Layout */
+  --container-max: 1320px;
+  --container-narrow: 980px;
+  --section-padding-y: clamp(4.5rem, 7vw, 7.5rem);
+  --section-padding-x: clamp(1.25rem, 4vw, 3.5rem);
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --border-radius-full: 9999px;
+}
+
+/* ==========================================================================
+   DARK MODE PALETTE (Sophisticated Luxury Night Showroom)
+   ========================================================================== */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #161210;
+  --color-bg-light: #241C17;
+  --color-bg-warm: #2C241E;
+  --color-bg-sand: #362C25;
+  --color-bg-dark: #120E0B;
+  --color-bg-dark-surface: #1A1511;
+
+  --color-text-primary: #F6F1EA;
+  --color-text-secondary: #DDD2C6;
+  --color-text-muted: #C9BBAE;
+  --color-text-light: #F6F1EA;
+  --color-text-light-muted: #D4C6B8;
+
+  --color-accent: #E09255;
+  --color-accent-hover: #F0A56C;
+  --color-accent-light: rgba(224, 146, 85, 0.16);
+  --color-accent-gold: #E0B86A;
+  --color-accent-gold-light: rgba(224, 184, 106, 0.16);
+
+  --color-border: #4E4238;
+  --color-border-light: #3A312A;
+  --color-border-dark: #2A221C;
+
+  --nav-bg: rgba(22, 18, 16, 0.96);
+  --card-bg: #241C17;
+  --input-bg: #2C241E;
+  --modal-bg: #1C1612;
+
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.65);
+}
+
+/* ==========================================================================
+   TAMIL TYPOGRAPHY ADJUSTMENTS
+   ========================================================================== */
+[data-lang="ta"],
+[lang="ta"] {
+  --font-serif: 'Noto Serif Tamil', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Noto Sans Tamil', 'Manrope', sans-serif;
+  line-height: 1.85;
+}
+
+[data-lang="ta"] .section-eyebrow,
+[data-lang="ta"] .hero-eyebrow-tag,
+[data-lang="ta"] .brand-tagline,
+[data-lang="ta"] .scroll-text,
+[data-lang="ta"] .card-badge,
+[data-lang="ta"] .pillar-badge,
+[data-lang="ta"] .contact-card-badge {
+  letter-spacing: 0.04em !important;
+}
+
+[data-lang="ta"] h1,
+[data-lang="ta"] h2,
+[data-lang="ta"] h3,
+[data-lang="ta"] .hero-heading,
+[data-lang="ta"] .section-title,
+[data-lang="ta"] .about-heading,
+[data-lang="ta"] .tradition-title,
+[data-lang="ta"] .showcase-title,
+[data-lang="ta"] .btn,
+[data-lang="ta"] .form-label,
+[data-lang="ta"] .nav-link,
+[data-lang="ta"] .mobile-nav-link,
+[data-lang="ta"] p {
+  letter-spacing: 0;
+}
+
+[data-lang="ta"] .hero-heading {
+  font-size: clamp(1.85rem, 7.2vw, 3.4rem);
+  line-height: 1.4;
+}
+
+[data-lang="ta"] .section-title,
+[data-lang="ta"] .about-heading,
+[data-lang="ta"] .tradition-title {
+  font-size: clamp(1.7rem, 6vw, 2.75rem);
+  line-height: 1.42;
+}
+
+[data-lang="ta"] .showcase-title {
+  font-size: clamp(1.8rem, 6.8vw, 3.3rem);
+  line-height: 1.4;
+}
+
+[data-lang="ta"] .btn,
+[data-lang="ta"] .form-label,
+[data-lang="ta"] .form-input,
+[data-lang="ta"] .form-textarea,
+[data-lang="ta"] .mobile-nav-link,
+[data-lang="ta"] p {
+  line-height: 1.75;
+}
+
+/* Base Reset & Smooth Scrolling */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  overflow-wrap: break-word;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+p {
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--font-sans);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, textarea, select {
+  font-family: var(--font-sans);
+  font-size: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--section-padding-x);
+  min-width: 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin-inline: auto;
+  margin-bottom: clamp(2.8rem, 4.5vw, 4rem);
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.775rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.section-eyebrow::before,
+.section-eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 1px;
+  background-color: var(--color-accent);
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.18;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--color-accent);
+  font-weight: 400;
+}
+
+.section-subtitle {
+  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+  font-family: var(--font-sans);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.9rem 1.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: var(--border-radius-sm);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1.2;
+  transition: all var(--transition-smooth);
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(166, 91, 46, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(166, 91, 46, 0.35);
+  color: #FFFFFF;
+}
+
+.btn-primary:active,
+.btn-secondary:active,
+.btn-whatsapp:active,
+.btn-outline-white:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border: 1.5px solid var(--color-text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-text-primary);
+  color: var(--color-bg);
+  transform: translateY(-2px);
+}
+
+.btn-outline-white {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-white:hover {
+  background-color: #FFFFFF;
+  color: #1F1A16;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background-color: var(--color-whatsapp);
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.25);
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--color-whatsapp-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.35);
+  color: #FFFFFF;
+}
+
+.btn-arrow {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Scroll Reveals */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s var(--ease-out-expo), transform 0.75s var(--ease-out-expo);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.75s var(--ease-out-expo), transform 0.75s var(--ease-out-expo);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.75s var(--ease-out-expo), transform 0.75s var(--ease-out-expo);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.75s var(--ease-out-expo), transform 0.75s var(--ease-out-expo);
+}
+
+.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) translateX(0) scale(1) !important;
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ========================================================================== 
+   PREFERS-REDUCED-MOTION — Respect OS accessibility setting
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ==========================================================================
+   DARK MODE — Global helpers & body-level overrides
+   ========================================================================== */
+[data-theme="dark"] body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .filter-btn.is-active,
+[data-theme="dark"] .heritage-seal {
+  color: #1C1410;
+}
+
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .btn-primary:focus-visible {
+  color: #1C1410;
+  background-color: var(--color-accent-hover);
+}
+
+[data-theme="dark"] {
+  --color-whatsapp: #128A46;
+  --color-whatsapp-dark: #0E7340;
+}
+
+[data-theme="dark"] ::selection {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Clip accidental overflow after the source layouts are constrained */
+html, body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .reveal-left,
+  .reveal-right {
+    transform: translateY(22px);
+  }
+
+  .btn {
+    min-height: 48px;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 8vw, 2.4rem);
+  }
+}
+

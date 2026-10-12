@@ -1,0 +1,146 @@
+/* ==========================================================================
+   WHY CHOOSE US COMPONENT STYLES
+   ========================================================================== */
+
+.whyus-section {
+  padding: var(--section-padding-y) 0;
+  background-color: var(--color-bg-light);
+  position: relative;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.whyus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.whyus-card {
+  background: var(--color-bg-warm);
+  padding: 2.2rem 1.8rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+}
+
+.whyus-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-accent);
+  background: #FFFFFF;
+}
+
+.whyus-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--border-radius-sm);
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+  box-shadow: var(--shadow-subtle);
+  transition: transform var(--transition-fast);
+}
+
+.whyus-card:hover .whyus-icon-wrap {
+  transform: scale(1.1);
+  background: var(--color-accent-light);
+  border-color: var(--color-accent);
+}
+
+.whyus-icon {
+  font-size: 1.6rem;
+}
+
+.whyus-card-title {
+  font-size: 1.25rem;
+ 
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.whyus-card-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+.whyus-card-hover-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--color-accent);
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.whyus-card:hover .whyus-card-hover-border {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .whyus-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .whyus-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .whyus-section {
+  border-top-color: var(--color-border);
+  border-bottom-color: var(--color-border);
+}
+
+[data-theme="dark"] .whyus-card {
+  background: var(--color-bg-warm);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .whyus-card:hover {
+  background: var(--color-bg-sand);
+  border-color: var(--color-accent);
+}
+
+[data-theme="dark"] .whyus-icon-wrap {
+  background: var(--color-bg-light);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .whyus-card:hover .whyus-icon-wrap {
+  background: var(--color-accent-light);
+  border-color: var(--color-accent);
+}
+
+[data-theme="dark"] .whyus-card-title {
+  color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .whyus-card-desc {
+  color: var(--color-text-secondary);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .whyus-card,
+  .whyus-icon-wrap {
+    transition: none !important;
+  }
+}
+

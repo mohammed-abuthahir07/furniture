@@ -1,0 +1,15 @@
+/* ==========================================================================
+   APP CONTAINER & LAYOUT STYLES
+   ========================================================================== */
+
+.furniture-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--color-bg);
+}
+
+main {
+  flex-grow: 1;
+}

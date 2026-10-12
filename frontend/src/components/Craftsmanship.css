@@ -1,0 +1,205 @@
+/* ==========================================================================
+   CRAFTSMANSHIP COMPONENT STYLES
+   ========================================================================== */
+
+.craftsmanship-section {
+  padding: var(--section-padding-y) 0;
+  background-color: var(--color-bg-warm);
+  position: relative;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+  margin-bottom: 3.5rem;
+}
+
+.pillar-card {
+  background: var(--color-bg-light);
+  padding: 2.2rem 1.8rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+}
+
+.pillar-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-accent);
+}
+
+.pillar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+.pillar-num {
+  
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.pillar-badge {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-warm);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-border-light);
+}
+
+.pillar-title {
+  font-size: 1.35rem;
+  
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.pillar-sub {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.pillar-desc {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin-top: auto;
+}
+
+.pillar-decor-line {
+  margin-top: 1.5rem;
+  height: 2px;
+  width: 35px;
+  background: var(--color-border);
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.pillar-card:hover .pillar-decor-line {
+  width: 100%;
+  background: var(--color-accent);
+}
+
+/* Bottom Callout Banner */
+.craft-banner {
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: 1.8rem 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.craft-banner-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.craft-banner-text h4 {
+  font-size: 1.15rem;
+
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.craft-banner-text p {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .craft-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .craftsmanship-section {
+  border-top-color: var(--color-border);
+  border-bottom-color: var(--color-border);
+}
+
+[data-theme="dark"] .pillar-card {
+  background: var(--color-bg-light);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .pillar-card:hover {
+  border-color: var(--color-accent);
+}
+
+[data-theme="dark"] .pillar-badge {
+  background: var(--color-bg-warm);
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .pillar-decor-line {
+  background: var(--color-border);
+}
+
+[data-theme="dark"] .pillar-card:hover .pillar-decor-line {
+  background: var(--color-accent);
+}
+
+[data-theme="dark"] .craft-banner {
+  background: var(--color-bg-light);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .craft-banner-text h4 {
+  color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .craft-banner-text p {
+  color: var(--color-text-secondary);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .pillar-card,
+  .pillar-decor-line {
+    transition: none !important;
+  }
+}
+

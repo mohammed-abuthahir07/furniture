@@ -1,0 +1,173 @@
+/* ==========================================================================
+   CUSTOM FURNITURE / BESPOKE COMPONENT STYLES
+   ========================================================================== */
+
+.bespoke-section {
+  padding: var(--section-padding-y) 0;
+  background-color: var(--color-bg-warm);
+  position: relative;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bespoke-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.bespoke-step-card {
+  background: var(--color-bg-light);
+  padding: 2.2rem 1.6rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-subtle);
+  position: relative;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+}
+
+.bespoke-step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-accent);
+}
+
+.step-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--border-radius-full);
+  display: inline-block;
+  margin-bottom: 1.2rem;
+}
+
+.step-title {
+  font-size: 1.25rem;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.step-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+/* Bespoke CTA Card */
+.bespoke-cta-card {
+  background: #FFFFFF;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-border);
+  padding: clamp(2.2rem, 4vw, 3.5rem);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.bespoke-cta-content {
+  max-width: 620px;
+}
+
+.bespoke-cta-heading {
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  margin-bottom: 0.65rem;
+}
+
+.bespoke-cta-sub {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+.bespoke-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-width: 280px;
+}
+
+.bespoke-btn {
+  width: 100%;
+}
+
+.bespoke-form-btn {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .bespoke-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bespoke-cta-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .bespoke-cta-buttons {
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .bespoke-steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .bespoke-section {
+  border-top-color: var(--color-border);
+  border-bottom-color: var(--color-border);
+}
+
+[data-theme="dark"] .bespoke-step-card {
+  background: var(--color-bg-light);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .bespoke-step-card:hover {
+  border-color: var(--color-accent);
+}
+
+[data-theme="dark"] .step-title {
+  color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .step-desc {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .bespoke-cta-card {
+  background: var(--color-bg-light);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .bespoke-cta-heading {
+  color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .bespoke-cta-sub {
+  color: var(--color-text-secondary);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .bespoke-step-card {
+    transition: none !important;
+  }
+}
+
